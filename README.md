@@ -41,21 +41,63 @@ This project uses the **IMDB Movie Review Dataset** containing 50,000 movie revi
 
 ---
 
-## 🧠 Model Architecture
+## 🧠 Model Details
+
+### Model Architecture
 
 ```text
 Movie Review
       ↓
 Text Preprocessing
       ↓
-TF-IDF Vectorization
+TF-IDF Vectorization (5000 Features)
       ↓
 PyTorch RNN
       ↓
+Fully Connected Layer
+      ↓
 Sigmoid Activation
       ↓
-Positive / Negative
+Positive / Negative Prediction
 ```
+
+### Training Configuration
+
+| Parameter | Value |
+|------------|---------|
+| Dataset | IMDB Movie Review Dataset |
+| Reviews | 50,000 |
+| Vectorizer | TF-IDF |
+| Max Features | 5000 |
+| Framework | PyTorch |
+| Model | Recurrent Neural Network (RNN) |
+| Hidden Size | 128 |
+| Output Layer | Fully Connected + Sigmoid |
+
+### Performance
+
+| Metric | Value |
+|---------|---------|
+| Test Accuracy | **85.71%** |
+| Task | Binary Sentiment Classification |
+| Classes | Positive, Negative |
+
+### Example Predictions
+
+| Review | Prediction |
+|----------|------------|
+| This movie was amazing and I loved it. | Positive 😊 |
+| This movie was terrible and boring. | Negative 😞 |
+| The acting was brilliant and the story was engaging. | Positive 😊 |
+| A complete waste of time and money. | Negative 😞 |
+
+---
+
+## 📊 Results
+
+The model was trained on the IMDB Movie Review Dataset and achieved an accuracy of **85.71%** on the test set.
+
+The deployed web application allows users to enter movie reviews and receive real-time sentiment predictions through a Flask-based interface.
 
 ---
 
@@ -163,7 +205,5 @@ The application is deployed on **Render** using:
 ## 👨‍💻 Author
 
 **Ritesh Kumar**
-
-GitHub: https://github.com/ritesh-kr18
 
 ---
