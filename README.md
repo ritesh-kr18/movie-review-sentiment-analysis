@@ -78,7 +78,7 @@ Positive / Negative Prediction
 
 | Metric | Value |
 |---------|---------|
-| Test Accuracy | **85.71%** |
+| Test Accuracy | **87.22%** |
 | Task | Binary Sentiment Classification |
 | Classes | Positive, Negative |
 
